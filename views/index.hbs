@@ -1,0 +1,60 @@
+   <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid ">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-primary " href="/"><h4>Mobi-Cart</h4></a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href=""> Cart</a>
+        </li>
+      </ul>
+      
+             <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+   
+    Account
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="/users/logout">Logout</a></li>
+    
+    
+    {{!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+  </ul>
+</div>
+    </div>
+  </div>
+</nav>
+    </header>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row">
+          {{#each products}}
+          <div class="col-md-3">
+             <div class="col">
+                <div class="card h-100 shadow-sm mb-3"> <img src="/images/{{this.image}}.png" class="card-img-top img-fluid" alt="...">
+                    <div class="label-top shadow-sm text-center"><h3>{{this.Name}}</h3></div>
+                    <div class="card-body">
+                        <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">{{this.Price}}</span> <span class="float-end"><a href="#" class="small text-muted">Check availability</a></span> </div>
+                        <h5 class="card-title">{{this.Description}}</h5>
+                        <div class="text-center my-4"> <a href="#" class="btn btn-warning">Add to Cart</a> </div>
+                        <div class="clearfix mb-1"> <span class="float-start"><i class="far fa-question-circle"></i></span> <span class="float-end"><i class="fas fa-plus"></i></span> </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+          </div>
+           {{/each}}
+        </div>
+      </div>
+    </section>
